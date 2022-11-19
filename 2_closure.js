@@ -79,3 +79,15 @@ function addOne(x) {
 
 const x = [1,2,3,4]
 console.log(map(x, addOne))
+
+// Callbacks
+function doSomething(callback) {
+    callback("Sync")
+}
+doSomething(console.log)
+
+// Building an asynchronous callback
+function doSomethingAsync(callback) {
+    setTimeout(function() {callback("Async")}, 1000)
+}
+doSomethingAsync(console.log)
